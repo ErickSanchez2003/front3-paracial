@@ -1,54 +1,115 @@
-/* Navbar - Barra de navegación */
-.navbar {
-    background-color: #2c3e50; /* Color de fondo oscuro */
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+/* Estilo del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px; /* Ancho máximo del formulario */
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background: #1e1e2f; /* Fondo oscuro */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra más marcada */
+  text-align: center;
+  border: 1px solid #444; /* Borde sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px); /* Efecto flotante */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Texto de bienvenida */
+#txtBienvenida {
+  font-size: 2rem;
+  color: #ff79c6; /* Rosa neón */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Etiquetas de texto */
+.txt {
+  font-size: 1rem;
+  color: #d6d6d6; /* Gris claro */
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%; /* Ancho completo del formulario */
+  font-weight: 500;
+}
+
+/* Entradas de texto */
+.entry {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #444; /* Borde oscuro */
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #2a2a3f; /* Fondo más oscuro */
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.entry:focus {
+  border-color: #ff79c6; /* Color rosa brillante */
+  box-shadow: 0 0 8px rgba(255, 121, 198, 0.5);
+  outline: none;
+}
+
+/* Botón de enviar */
+#btnEnviar {
+  background: linear-gradient(145deg, #ff79c6, #bd56a0); /* Degradado de rosa */
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 121, 198, 0.4);
+}
+
+#btnEnviar:hover {
+  background: linear-gradient(145deg, #bd56a0, #8b3a79); /* Rosa oscuro */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 121, 198, 0.6);
+}
+
+/* Botón de registro */
+#forgotPasswordLink {
+  margin-top: 15px;
+  background: none;
+  color: #ff79c6;
+  border: none;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#forgotPasswordLink:hover {
+  color: #bd56a0; /* Rosa más oscuro */
+  text-decoration: none;
+}
+
+/* Estilo adaptativo */
+@media (max-width: 600px) {
+  form {
+      padding: 20px;
   }
-  
-  .navbar-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+
+  #txtBienvenida {
+      font-size: 1.5rem;
   }
-  
-  .navbar-item {
-    margin-right: 20px;
+
+  #btnEnviar {
+      font-size: 0.9rem;
+      padding: 10px 20px;
   }
-  
-  .navbar-item a,
-  .navbar-item button {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px;
-    background-color: transparent;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .navbar-item a:hover,
-  .navbar-item button:hover {
-    background-color: #34495e;
-    color: #ecf0f1;
-  }
-  
-  .logout-button {
-    border: 2px solid #e74c3c;
-    background-color: transparent;
-    color: #e74c3c;
-    font-weight: bold;
-  }
-  
-  .logout-button:hover {
-    background-color: #e74c3c;
-    color: white;
-  }
-  
+}
